@@ -128,7 +128,13 @@ p.todo{
 }
 
 h3{
-    font-family: 'Irish Grover', cursive;
+    font-family: 'Poppins', sans-serif;
+}
+
+.today{
+    font-family: 'Poppins', sans-serif;
+    color: #FF00E5;
+    font-weight: 600;
 }
 
 

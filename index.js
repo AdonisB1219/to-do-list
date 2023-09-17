@@ -19,14 +19,18 @@ app.get("/", (req, res) => {
 });
 
 app.get("/today", (req, res) => {
-    res.render("index.ejs", {list : todayList, todayCol : "hola"});
+    let today = new Date();
+    res.render("index.ejs", {list : todayList, todayCol : "hola", today : today.toDateString()});
 });
 
 app.get("/tomorrow", (req, res) => {
-    res.render("index.ejs", {list : tomorrow, tomorrowCol : "hola"});
+    let today = new Date();
+    today.setDate(String(Number(today.getDate())+1));
+    res.render("index.ejs", {list : tomorrow, tomorrowCol : "hola", today : today.toDateString()});
 });
 
 app.get("/next_weeks", (req, res) => {
+    let today = new Date();
     next_weeks.sort((a, b) => {
         if (a.dateForComparing > b.dateForComparing) {
           return 1;
