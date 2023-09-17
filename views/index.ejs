@@ -1,0 +1,56 @@
+<%- include("partials/header.ejs") %>
+
+  <div class="todos-list">
+
+    <% if(locals.list) { %>
+      <% for(let i=0; i < list.length; i++){ %>
+        <div class="checkbox-style">
+        <ul>
+          <li class="todo-item">
+            <div class="checkbox">
+              <input type="checkbox" id="cbox<%= list[i]["cont"]%>" value="first_checkbox" />
+              <p class="todo item<%= list[i]["cont"]%>" <% if(list[i]["checked"]) {%> style="text-decoration: line-trough" <% } %>><%= list[i]["todo"]%></p>
+              <span></span>
+            </div>
+          <p class="due-date">Due to <strong><%= list[i]["date"]%></strong></p>
+        </li>
+          <hr />
+        </ul>
+      </div>
+        <% } %> <!--for-->
+          
+
+
+            <% if(locals.list.length==0) { %>
+              <h2>Any to Do's in here</h2>
+              <% } %>
+              <% } %> <!--if-->
+
+
+
+  </div>
+
+  <div class="btn-add">
+    <button id="myBtn"> + </button>
+  </div>
+
+  
+
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <h2>New to do</h2>
+      <span class="close">&times;</span>
+      <form action="/submit" method="post">
+        <div class="cont-formulario">
+        <input class="input" type="text" name="todo" id="" placeholder="Title"> <br>
+        <input class="input" type="date" name="date" id="" placeholder="Due date"> <br>
+        <input type="submit" value="Send" id="btn-enviar">
+      </div>
+      </form>
+    </div>
+
+  </div>
+
+  
+  <%- include("partials/footer.ejs") %>

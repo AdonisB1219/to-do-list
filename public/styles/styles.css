@@ -1,0 +1,268 @@
+html, body{
+    margin: 0;
+}
+
+/* Header */
+
+
+header{
+background: rgb(255,124,242);
+background: linear-gradient(180deg, rgba(255,124,242,1) 0%, rgba(255,255,255,1) 100%);
+margin: 0;
+}
+
+.nav{
+font-family: 'Irish Grover', cursive;
+text-align: center;
+margin-top: 0;
+padding-top: 40px;
+color: white;
+font-size: 45px;
+}
+
+.nav-list{
+    text-align: center;
+}
+
+.nav-list > *{
+    font-family: 'Irish Grover', cursive;
+    list-style: none;
+    display: inline-block;
+    padding: 0px 25px;
+    margin-bottom: 40px;
+    font-size: 35px;
+}
+
+.nav-list > * > * , h2{
+    text-decoration: none;
+    color: #FF00E5;
+    border-radius: 8px;
+    padding: 5px 20px;
+}
+
+
+.selected{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* TODO LIST */
+.todo > * {
+    list-style: none;
+}
+
+.todos-list{
+    text-align: center;
+    margin: 0 50px;
+}
+
+.todos-list > ul{
+    margin:0;
+    padding: 0 100px;
+}
+
+ul.todo{
+    margin: 0;
+    padding: 0;
+}
+
+.todo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+}
+
+input[type=checkbox] {
+    vertical-align: middle;
+    transform: scale(1.8);
+}
+
+.checkbox{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input:checked + p {
+    text-decoration: line-through;
+    text-decoration-color: #FF00E5;
+}
+
+
+.todo-item{
+    list-style: none;
+}
+
+p.due-date{
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+p.todo{
+    margin: 0;
+}
+
+
+
+/* ADD TODO*/
+.btn-add{
+    display: flex;
+    justify-content: end;   
+    margin: 10px 50px;
+}
+
+#myBtn{
+    border-radius: 50%;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: end;
+    background-color: #FF00E5;
+    color: white;
+    border: 0;
+    padding: 0px 15px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px  #a6469c;;
+}
+
+
+
+/* Modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(250, 201, 235); /* Fallback color */
+  background-color: rgba(215, 126, 188, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fee7fb;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 2px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px  #f870ea;;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .cont-formulario > .input {
+    background-color: #fee7fb;
+    border: 0;
+    border-bottom: 1px solid black;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    width: 400px;
+  }
+
+  .cont-formulario > input{
+    margin-bottom: 30px;
+  }
+
+  #btn-enviar{
+    background-color: #FF00E5;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 0;
+    height: 40px;
+    box-shadow: 3px 3px 5px  #a6469c;;
+    cursor: pointer;
+  }
+
+  form{
+    display: flex;
+    justify-content: center;
+  }
+
+  .cont-formulario{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2{
+    font-family: 'Irish Grover', cursive;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+footer{
+    background-color: #FFD4FB;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.footer{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(123, 123, 123);
+    text-align: center;
+    margin-top: 45px;
+}
+
+@media (max-width: 920px){
+    .nav-list > *{
+        padding: 0px 10px;
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 700px){
+    .nav-list > *{
+        padding: 0px 50px;
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .cont-formulario > .input {
+        font-size: 15px;
+        width: 80%;
+      }
+
+      .todo{
+        font-size: 20px;
+    }
+
+    .todos-list{
+        margin: 0 20px;
+    }
+
+    .todos-list > ul{
+        padding: 0 20px;
+    }
+
+    p.due-date{
+        font-size: 15px;
+    }
+
+    ul{
+        padding:0;
+    }
+}

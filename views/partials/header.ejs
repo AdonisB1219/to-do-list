@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <header>
+    <h1 class="nav">To Do List</h1>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="/today" id="nav-today" class="nav-item" <%if(locals.todayCol) { %> style="background-color: rgba(255, 255, 255, 0.5)" <% } %>>Today</a></li>
+            <li><a href="/tomorrow" id="nav-tomorrow" class="nav-item" <%if(locals.tomorrowCol) { %> style="background-color: rgba(255, 255, 255, 0.5)" <% } %>>Tomorrow</a></li>
+            <li><a href="/next_weeks" id="nav-next-weeks" class="nav-item" <%if(locals.nextWeeksCol) { %> style="background-color: rgba(255, 255, 255, 0.5)" <% } %>>Next weeks</a></li>
+            <li><a href="/past" id="nav-past" class="nav-item" <%if(locals.pastCol) { %> style="background-color: rgba(255, 255, 255, 0.5)" <% } %>>Past</a></li>
+        </ul>
+    </nav>
+</header>
