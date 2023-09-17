@@ -15,7 +15,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended : true}));
 
 app.get("/", (req, res) => {
-    res.render("index.ejs");
+    res.render("index.ejs", {list : list});
 });
 
 app.get("/today", (req, res) => {
