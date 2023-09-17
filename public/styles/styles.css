@@ -89,6 +89,7 @@ input[type=checkbox] {
 input:checked + p {
     text-decoration: line-through;
     text-decoration-color: #FF00E5;
+    color: #fbb9f5;
 }
 
 
